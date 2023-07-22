@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decrypt Snippet</title>
+</head>
+<body>
+    <h1>Decrypt Snippet</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="key">Enter the secret key:</label>
+        <input type="text" name="key" id="key" required>
+        <button type="submit">Decrypt</button>
+    </form>
+</body>
+</html>

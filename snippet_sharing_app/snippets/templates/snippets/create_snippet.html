@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Snippet</title>
+</head>
+<body>
+    <h1>Create a new snippet</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+    {% if snippet_url %}
+        <p>Your snippet URL: <a href="{{ snippet_url }}">{{ snippet_url }}</a></p>
+    {% endif %}
+</body>
+</html>
